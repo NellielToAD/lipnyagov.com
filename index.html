@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Иван Липнягов — проекты</title>
+<meta name="description" content="Проекты Ивана Липнягова: MCP-коннекторы для AI-агентов, боты и инструменты автоматизации.">
+<style>
+  :root{
+    --bg:#faf9f5; --card:#ffffff; --ink:#1f1e1d; --muted:#6b6862; --line:#e6e3da;
+    --accent:#d97757; --accent-hover:#c4664a; --tag:#f1efe8;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#1f1e1d; --card:#2a2927; --ink:#f5f4ef; --muted:#a8a59c; --line:#3b3a36; --tag:#34332f; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+  a{color:inherit}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+  header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);
+         backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:700;font-size:18px;text-decoration:none;letter-spacing:.2px}
+  nav{display:flex;gap:10px;align-items:center}
+  .link{text-decoration:none;color:var(--muted);padding:8px 12px;border-radius:10px;font-size:15px}
+  .link:hover{color:var(--ink);background:var(--tag)}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;
+       padding:10px 18px;border-radius:12px;font-size:15px;transition:background .15s}
+  .btn-claude{background:var(--accent);color:#fff}
+  .btn-claude:hover{background:var(--accent-hover)}
+  .btn-ghost{border:1px solid var(--line);background:var(--card)}
+  .btn-ghost:hover{background:var(--tag)}
+
+  .hero{padding:88px 0 56px}
+  .hero h1{font-size:clamp(32px,5vw,48px);line-height:1.15;margin:0 0 16px;font-weight:700}
+  .hero p{font-size:19px;color:var(--muted);max-width:640px;margin:0 0 32px}
+  .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+  .hero .btn{padding:14px 22px;font-size:16px}
+
+  section{padding:40px 0 72px}
+  h2{font-size:28px;margin:0 0 8px}
+  .sub{color:var(--muted);margin:0 0 28px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;
+        display:flex;flex-direction:column;gap:10px;transition:transform .15s,border-color .15s}
+  .card:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .card h3{margin:0;font-size:18px}
+  .card p{margin:0;color:var(--muted);font-size:15px;flex:1}
+  .tags{display:flex;gap:6px;flex-wrap:wrap}
+  .tag{background:var(--tag);color:var(--muted);font-size:12px;padding:3px 9px;border-radius:999px}
+  .card a.gh{align-self:flex-start;text-decoration:none;font-weight:600;font-size:14px;color:var(--accent)}
+  .card a.gh:hover{text-decoration:underline}
+
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  @media (max-width:560px){
+    .link.hide-sm{display:none}
+    .hero{padding:56px 0 40px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#">lipnyagov</a>
+    <nav>
+      <a class="link hide-sm" href="#projects">Мои проекты</a>
+      <a class="link hide-sm" href="https://github.com/NellielToAD" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn btn-claude" href="https://my.lipnyagov.com:9443" target="_blank" rel="noopener">✱ Claude</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>Иван Липнягов</h1>
+    <p>Строю AI-агентов и инструменты автоматизации: MCP-коннекторы к рабочим сервисам, боты в мессенджерах и собственную инфраструктуру.</p>
+    <div class="actions">
+      <a class="btn btn-claude" href="https://my.lipnyagov.com:9443" target="_blank" rel="noopener">✱ Claude</a>
+      <a class="btn btn-ghost" href="#projects">Мои проекты →</a>
+    </div>
+  </div>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Мои проекты</h2>
+      <p class="sub">MCP-коннекторы подключают AI-агентов к сервисам, где коробочных интеграций нет или их возможностей не хватает.</p>
+
+      <div class="grid">
+
+        <article class="card">
+          <h3>Битрикс24 MCP-коннектор</h3>
+          <p>Даёт AI-агентам доступ к данным и действиям портала Битрикс24. Работает на своём сервере с автообновлением из репозитория.</p>
+          <div class="tags"><span class="tag">MCP</span><span class="tag">CRM</span><span class="tag">AI-агенты</span></div>
+          <!-- TODO: ссылка на репозиторий -->
+          <a class="gh" href="https://github.com/NellielToAD" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card">
+          <h3>hh.ru MCP-коннектор</h3>
+          <p>Работа с аккаунтом работодателя: вакансии, отклики и резюме, разбор откликов по этапам, сообщения кандидатам, поиск по базе резюме.</p>
+          <div class="tags"><span class="tag">MCP</span><span class="tag">HR</span><span class="tag">hh.ru API</span></div>
+          <!-- TODO: ссылка на репозиторий -->
+          <a class="gh" href="https://github.com/NellielToAD" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card">
+          <h3>Saby (СБИС) MCP-коннектор</h3>
+          <p>Поиск тендеров и другие функции Saby для AI-агентов: агент сам находит подходящие закупки по запросу.</p>
+          <div class="tags"><span class="tag">MCP</span><span class="tag">Тендеры</span><span class="tag">Saby API</span></div>
+          <!-- TODO: ссылка на репозиторий -->
+          <a class="gh" href="https://github.com/NellielToAD" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card">
+          <h3>MAX MCP-коннектор</h3>
+          <p>Читает сообщения групповых чатов мессенджера MAX через бота и передаёт их AI-агентам. Стандартный коннектор групповые сообщения не читает.</p>
+          <div class="tags"><span class="tag">MCP</span><span class="tag">MAX</span><span class="tag">Webhook</span></div>
+          <!-- TODO: ссылка на репозиторий -->
+          <a class="gh" href="https://github.com/NellielToAD" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card">
+          <h3>Яндекс Диск MCP-коннектор</h3>
+          <p>Поиск по Диску, перемещение файлов между папками, чтение и запись содержимого xlsx-таблиц, чего не умеет стандартная интеграция.</p>
+          <div class="tags"><span class="tag">MCP</span><span class="tag">Яндекс Диск</span><span class="tag">Excel</span></div>
+          <!-- TODO: ссылка на репозиторий -->
+          <a class="gh" href="https://github.com/NellielToAD" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+        <article class="card">
+          <h3>VPN by IL</h3>
+          <p>Собственный VPN-клиент для Windows и Android TV на базе AmneziaVPN, со своим оформлением и логотипом.</p>
+          <div class="tags"><span class="tag">VPN</span><span class="tag">Windows</span><span class="tag">Android TV</span></div>
+          <a class="gh" href="https://github.com/NellielToAD/vpn-by-il" target="_blank" rel="noopener">GitHub →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Иван Липнягов</span>
+    <a href="https://github.com/NellielToAD" target="_blank" rel="noopener">github.com/NellielToAD</a>
+  </div>
+</footer>
+
+</body>
+</html>
